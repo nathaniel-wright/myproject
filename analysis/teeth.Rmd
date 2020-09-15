@@ -1,0 +1,25 @@
+---
+title: "teeth"
+author: "Nathaniel Wright"
+date: "2020-09-15"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r import-teeth}
+teeth <- read.csv("data/teeth.csv", row.names = 1)
+head(teeth)
+```
+
+```{r boxplots}
+boxplot(len ~ dose, data=teeth)
+boxplot(len ~ supp, data=teeth)
+boxplot(len ~ dose + supp, data=teeth)
+```
+
+```{r permute}
+```
+
